@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.selenium.repository.selenium.SeleniumMapper">
+
+    <insert id="inserByBulk" parameterType="List">
+        INSERT INTO selenium.t_selenium_fx_rate(cron_at, company, currency, price, country, usd_cvs_price, spread_usd_cvs_price)
+        VALUES
+        <foreach item="item" index="index" collection="statusCondition" open="(" close=")" separator=",">
+            #{item.cronAt}, #{item.company}, #{item.currency}, #{item.price}, #{item.country}, #{item.usdCvsPrice}, #{item.spreadUsdCvsPrice}
+        </foreach>
+    </insert>
+</mapper>

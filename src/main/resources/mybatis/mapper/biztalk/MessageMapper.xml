@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.selenium.repository.biztalk.MessageMapper">
+
+    <resultMap id="ImcMtMsgMap" type="ImcMtMsg">
+        <result property="id" column="id"/>
+        <result property="mtType" column="mt_type"/>
+        <result property="status" column="status"/>
+        <result property="priority" column="priority"/>
+        <result property="adFlag" column="ad_flag"/>
+        <result property="reservedDate" column="reserved_date"/>
+        <result property="phoneNumber" column="phone_number"/>
+        <result property="callback" column="callback"/>
+        <result property="title" column="title"/>
+        <result property="message" column="message"/>
+        <result property="attachFile01" column="attach_file_01"/>
+        <result property="attachFile02" column="attach_file_02"/>
+        <result property="attachFile03" column="attach_file_03"/>
+        <result property="billCode" column="bill_code"/>
+        <result property="requestUid" column="request_uid"/>
+        <result property="requestDate" column="request_date"/>
+        <result property="responseDate" column="response_date"/>
+        <result property="responseCode" column="response_code"/>
+        <result property="reportType" column="report_type"/>
+        <result property="reportDate" column="report_date"/>
+        <result property="reportCode" column="report_code"/>
+        <result property="arrivalDate" column="arrival_date"/>
+        <result property="senderCode" column="sender_code"/>
+        <result property="etc1" column="etc1"/>
+        <result property="etc2" column="etc2"/>
+        <result property="etc3" column="etc3"/>
+        <result property="etc4" column="etc4"/>
+        <result property="etc5" column="etc5"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="ImcMtMsg">
+        INSERT INTO biztalk.IMC_MT_MSG (MT_TYPE, STATUS, PRIORITY, RESERVED_DATE, PHONE_NUMBER, CALLBACK, TITLE, MESSAGE)
+        VALUES(#{mtType}, #{status}, #{priority}, #{reservedDate}, #{phoneNumber}, #{callback}, #{title}, #{message})
+    </insert>
+</mapper>

@@ -1,0 +1,63 @@
+
+server:
+    port:
+    mode: local
+    operation: normal
+    tomcat:
+        max-connections:  2000
+        max-threads: 500
+        accept-count: 2000
+
+thread:
+    size: 15
+
+
+selenium:
+    selenium:
+        datasource:
+            url:
+            username:
+            password:
+            driver-class-name: net.sf.log4jdbc.DriverSpy
+            pool-size: 5
+
+    biztalk:
+        datasource:
+            url:
+            username:
+            password:
+            enkey:
+            driver-class-name: net.sf.log4jdbc.DriverSpy
+            pool-size: 5
+spring:
+    sendgrid:
+        api-key:
+        sender:
+        receiver:
+sms:
+    sender:
+    receiver:
+
+google:
+    spreadsheet:
+        credential-path:
+
+
+competitors:
+    competitor1:
+    competitor2:
+    competitor3:
+    competitor4:
+    competitor5:
+    competitor6:
+    competitor7:
+    competitor8:
+    competitor9:
+    competitor10:
+    competitor11:
+    competitor12:
+    competitor13:
+
+
+logging :
+    config: classpath:logging/logback.xml

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.selenium.repository.selenium.SeleniumConfigMapper">
+
+    <resultMap id="seleniumConfigMap" type="SeleniumConfig">
+        <result property="seq" column="seq"/>
+        <result property="category" column="category"/>
+        <result property="code" column="code"/>
+        <result property="codeValue" column="code_value"/>
+        <result property="codeParam" column="code_param"/>
+        <result property="enable" column="enable"/>
+        <result property="description" column="description"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <select id="selectSeleniumConfigAll" resultMap="seleniumConfigMap">
+        SELECT * FROM selenium.t_selenium_config WHERE enable = true
+    </select>
+</mapper>
